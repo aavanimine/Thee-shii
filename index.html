@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Love Timeline 🤍</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #ff9a9e, #fad0c4);
+      color: #333;
+      overflow-x: hidden;
+    }
+    h1 {
+      text-align: center;
+      padding: 30px 10px;
+      color: #fff;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    }
+    .timeline {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    .card {
+      background: #fff;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      position: relative;
+      animation: fadeIn 1s ease;
+    }
+    .card h2 {
+      margin-top: 0;
+      color: #ff4d6d;
+    }
+    .card p {
+      line-height: 1.6;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 20px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(-100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our Love Timeline 🤍</h1>
+
+  <div class="timeline">
+
+    <div class="card">
+      <h2>💬 First Chat</h2>
+      <p>Enk aryuelenu shiii annathe aa  msg inje ente lifele ithrem valye part akki mattum nnn😭🤍.</p>
+      <!-- Optional image -->
+      <!-- <img src="https://ibb.co/mCGgX30M"> -->
+    </div>
+
+    <div class="card">
+      <h2> First Meet🤍</h2>
+      <p>ayyoo ath marakkunn thonn nndoo
+
+2025 dec 29.</p>
+    </div>
+
+    <div class="card">
+      <h2>😅 First Fight</h2>
+      <p>ath enk ormyllaaaa ellappom adi thanne lle shiiii😂🤍.</p>
+    </div>
+
+    <div class="card">
+      <h2>🤍 enth vannalum inj thanne mathi ponneee 😌🤍</h2>
+      <p>No matter what, I still choose you. Again and again.</p>
+    </div>
+
+  </div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerText = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+      heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+
+    setInterval(createHeart, 500);
+  </script>
+
+</body>
+</html>
